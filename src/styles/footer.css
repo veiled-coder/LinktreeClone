@@ -1,0 +1,27 @@
+.footer {
+  margin-top: 1%;
+  width: 70%;
+}
+.footer div {
+  display: flex;
+  justify-content: space-between;
+}
+.footer--icon {
+  margin-top: 1rem;
+  height: 1rem;
+}
+@media (max-width: 786px) {
+  .footer {
+    width: 85%;
+  }
+  .footer div {
+    flex-direction: column;
+  }
+  .footer--icon {
+    height: auto;
+    width: 6rem;
+  }
+  .text {
+    width: 10rem;
+  }
+}

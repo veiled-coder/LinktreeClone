@@ -3,6 +3,23 @@ div#root {
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  padding: 3rem 0;
+
   position: relative;
+}
+.app--container {
+ 
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content--container {
+  width: 50rem;
+  max-width: 85%;
+  padding: 3rem 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
