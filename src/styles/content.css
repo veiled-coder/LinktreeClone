@@ -46,9 +46,18 @@
   padding: 24px 0;
   margin-bottom: 1rem;
   border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #eaecf0;
 }
 .socials__btn:hover {
   background-color: #d0d5dd;
+}
+.socials__btn:focus {
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #ebe9fe;
+  border: 1px solid #98a2b3;
 }
 #slack {
   display: none;
@@ -68,28 +77,45 @@ a {
   justify-content: space-between;
 }
 .sharemobile {
-  visibility: hidden;
+  display: none;
 }
-.share{
-   position: absolute;
-    top: 3%;
-    right: 20%;
+
+.share-icons--container {
+  position: relative;
+  align-self: flex-end;
+
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+  border: 1px dashed #d0d5dd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
 }
+.share-icons--container:hover {
+  background-color: #f9fafb;
+}
+.share-icons--container:focus {
+  box-shadow: 0px 0px 0px 4px #f2f4f7;
+}
+
 .camera {
   width: 20%;
   height: auto;
   margin-bottom: 5%;
 }
 @media (max-width: 786px) {
-  .icon--container {
-    width: 20%;
-  }
   .sharemobile {
-    visibility: visible;
-    right: 8%;
-   
+    display: block;
+    width: auto;
+    height: auto;
   }
-  .shareweb{
-    visibility: hidden;
+  .shareweb {
+    display: none;
+  }
+  .icon--container{
+    width: 20%;
   }
 }

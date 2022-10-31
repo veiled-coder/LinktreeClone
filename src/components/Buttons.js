@@ -1,15 +1,13 @@
 import React from "react";
 
-
-export default function Buttons(props) {
+export default function Buttons({ name, id, subtext, href }) {
   return (
     <>
-      <a href={props.href}>
-        <button id={props.id} className="socials__btn">
-          {props.name}
+      <a href={href}>
+        <button id={id} className="socials__btn" title={subtext}>
+          {name}
         </button>
       </a>
-     
     </>
   );
 }
