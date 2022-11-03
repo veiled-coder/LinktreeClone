@@ -12,6 +12,7 @@ div#root {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: aqua;
 }
 .content--container {
   width: 50rem;

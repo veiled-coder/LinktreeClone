@@ -1,15 +1,19 @@
 import React from "react";
 import "../styles/app.css";
-import Content from "./Content";
-import Footer from "./Footer";
 
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Contact from "./Contact";
+
+import Homepage from "./Homepage";
 export default function App() {
   return (
-    <div className="app--container">
-      <div className="content--container">
-        <Content />
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
       </div>
-      <Footer />
-    </div>
+    </Router>
   );
 }

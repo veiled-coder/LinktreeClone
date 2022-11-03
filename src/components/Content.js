@@ -1,10 +1,11 @@
 import React from "react";
-import "../styles/content.css";
+import "../styles/homepagecontent.css";
 import girl from "../images/girl.png";
 import Socials from "./Socials";
 import Icons from "./Icons";
 import sharemobile from "../images/share.png";
 import shareweb from "../images/shareweb.png";
+
 
 import camera from "../images/camera.png";
 export default function Content() {
@@ -27,6 +28,7 @@ export default function Content() {
       <p id="slack">veiled-coder</p>
       <Socials />
       <Icons />
+  
     </>
   );
 }

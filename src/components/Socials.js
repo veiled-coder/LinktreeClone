@@ -32,8 +32,9 @@ export default function Socials() {
         name="Design Books"
         id="book__design"
         href="https://books.zuri.team/design-rules"
-        subtext='We are here to help you get stated in your design career. Click here to access our free design books'
+        subtext="We are here to help you get stated in your design career. Click here to access our free design books"
       />
+      <Buttons name="contact" id="Contact" to="/contact" />
     </section>
   );
 }
