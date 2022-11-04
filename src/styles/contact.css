@@ -1,0 +1,44 @@
+.contact {
+  width: 50rem;
+  padding: 5rem 0;
+  max-width: 90%;
+  background-color: antiquewhite;
+}
+form {
+  width: 100%;
+  background-color: azure;
+  display: flex;
+  flex-direction: column;
+}
+.names {
+  display: flex;
+  gap: 1rem;
+}
+.name,.mail,.textarea {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.input--style {
+  padding: 10px 14px;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  margin-bottom: 1rem;
+}
+label {
+  line-height: 20px;
+}
+::placeholder {
+  color: #667085;
+
+  opacity: 1;
+}
+#message{
+    height: 132px;
+}
+@media(max-width:900px){
+    .names{
+        flex-direction: column;
+    }
+}
