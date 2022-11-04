@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "../styles/contact.css";
 import Button from "./Buttons";
 function Contact() {
@@ -17,7 +16,7 @@ function Contact() {
               type="text"
               className="input--style"
               placeholder="Enter your first name"
-            ></input>
+            />
           </div>
           <div className=" name">
             <label htmlFor="last_name">Last Name</label>
@@ -27,7 +26,7 @@ function Contact() {
               type="text"
               className="input--style"
               placeholder="Enter your last name"
-            ></input>
+            />
           </div>
         </div>
         <div className="mail">
@@ -54,9 +53,13 @@ function Contact() {
             You agree to providing your data to who may contact you.
           </label>
         </div>
-        <Button type="submit" name="Send message" Class="input--style btn--submit" id='btn_submit' />
+        <Button
+          type="submit"
+          name="Send message"
+          Class="input--style btn--submit"
+          id="btn_submit"
+        />
       </form>
-    
     </div>
   );
 }
