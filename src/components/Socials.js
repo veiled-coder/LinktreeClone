@@ -37,7 +37,7 @@ export default function Socials() {
         />
       </a>
       <Link to="/contact">
-        <Buttons name="Contact Me" />
+        <Buttons name="Contact Me" id="contact" />
       </Link>
     </section>
   );
