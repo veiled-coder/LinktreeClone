@@ -1,10 +1,10 @@
 import React from "react";
 
 
-export default function Buttons({ name, id, subtext, href }) {
+export default function Buttons({ name, id, subtext,Class,type}) {
   return (
     <>
-      <button id={id} className="socials__btn" title={subtext}>
+      <button id={id} className={Class} title={subtext} type={type}> 
         {name}
       </button>
     </>

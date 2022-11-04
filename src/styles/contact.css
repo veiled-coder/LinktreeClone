@@ -1,12 +1,19 @@
 .contact {
   width: 50rem;
   padding: 5rem 0;
-  max-width: 90%;
-  background-color: antiquewhite;
+  max-width: 95%;
+  font-family: 'Inter', sans-serif;
+
+  
+}
+h2{
+    font-size: 2.3rem;
+    font-weight: 600;
+    letter-spacing: 1;
 }
 form {
   width: 100%;
-  background-color: azure;
+
   display: flex;
   flex-direction: column;
 }
@@ -36,9 +43,38 @@ label {
 }
 #message{
     height: 132px;
+    resize: none;
+}
+.term--text{
+    color: #475467;
+    line-height: 24px;
+}
+.terms{
+    display: flex;
+  
+
+}
+#term{
+    margin: 0 .4rem 0 0;
+    border: 1px solid #D0D5DD
+}
+.btn--submit{
+ background: #1570EF;
+ color: white;
+ font-weight: 600;
+ border: 1px solid #1570EF;
+ margin-top: 2rem;
+
 }
 @media(max-width:900px){
     .names{
         flex-direction: column;
+    }
+    .terms{
+      align-items: baseline;
+        
+    }
+    .contact{
+        padding: 3rem 0;
     }
 }

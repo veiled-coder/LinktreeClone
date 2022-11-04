@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/contact.css";
+import Button from "./Buttons";
 function Contact() {
   return (
     <div className="contact">
@@ -9,7 +10,7 @@ function Contact() {
       <form>
         <div className="names">
           <div className="name">
-            <label for="first_name">First Name</label>
+            <label htmlFor="first_name">First Name</label>
 
             <input
               id="first_name"
@@ -19,7 +20,7 @@ function Contact() {
             ></input>
           </div>
           <div className=" name">
-            <label for="last_name">Last Name</label>
+            <label htmlFor="last_name">Last Name</label>
 
             <input
               id="last_name"
@@ -30,7 +31,7 @@ function Contact() {
           </div>
         </div>
         <div className="mail">
-          <label for="email">Email</label>
+          <label htmlFor="email">Email</label>
           <input
             id="email"
             type="email"
@@ -39,7 +40,7 @@ function Contact() {
           ></input>
         </div>
         <div className="textarea">
-          <label for="message">Message</label>
+          <label htmlFor="message">Message</label>
           <textarea
             id="message"
             name="message"
@@ -47,11 +48,15 @@ function Contact() {
             placeholder="Send me a message and I'll reply you as soon as possible..."
           ></textarea>
         </div>
+        <div className="terms">
+          <input type="checkbox" id="term"></input>
+          <label htmlFor="term" className="term--text">
+            You agree to providing your data to who may contact you.
+          </label>
+        </div>
+        <Button type="submit" name="Send message" Class="input--style btn--submit" id='btn_submit' />
       </form>
-      <Link to="/">
-        {" "}
-        <p style={{ fontSize: "5rem" }}>Home</p>
-      </Link>
+    
     </div>
   );
 }
