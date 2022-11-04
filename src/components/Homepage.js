@@ -9,7 +9,7 @@ function Homepage() {
           <div className="content--container">
             <Content />
           </div>
-          <Footer />
+        
         </div>
   )
 }

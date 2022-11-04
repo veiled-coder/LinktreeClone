@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/app.css";
+import Footer from "./Footer";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Contact from "./Contact";
@@ -13,6 +14,7 @@ export default function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );

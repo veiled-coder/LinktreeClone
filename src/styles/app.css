@@ -1,8 +1,13 @@
 div#root {
   max-width: 100%;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
+ 
+}
+.App{
+  width: 100%;
+   display: flex;
+   flex-direction: column;
+align-items: center;
 
   position: relative;
 }
@@ -12,12 +17,12 @@ div#root {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: aqua;
+
 }
 .content--container {
   width: 50rem;
   max-width: 90%;
-  padding: 3rem 0;
+  margin: 3rem 0;
 
   display: flex;
   flex-direction: column;

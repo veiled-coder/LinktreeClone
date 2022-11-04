@@ -1,6 +1,8 @@
 .footer {
   margin-top: 1%;
-  width: 70%;
+  width: 80%;
+  justify-self: flex-start;
+  margin-bottom: 3rem;
 }
 .footer div {
   display: flex;
