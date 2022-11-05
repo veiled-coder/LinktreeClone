@@ -1,12 +1,27 @@
 import React from "react";
 import "../styles/contact.css";
 import Button from "./Buttons";
+import { useState } from "react";
 function Contact() {
+  const [error, setError] = useState(false);
+  const [value, setValue] = useState("");
+
+  function handleChange(e) {
+    setValue(e.target.value);
+  }
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log(value);
+    if (value.length == 0) {
+      setError(true);
+    }
+  }
+
   return (
     <div className="contact">
       <h2>Contact Me</h2>
       <p>Hi there, contact me to ask me about anything you have in mind.</p>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="names">
           <div className="name">
             <label htmlFor="first_name">First Name</label>
@@ -45,7 +60,16 @@ function Contact() {
             name="message"
             className="input--style"
             placeholder="Send me a message and I'll reply you as soon as possible..."
+            onChange={handleChange}
+            
           ></textarea>
+          {error && value.length <= 0 ? (
+            <p style={{ color: "red", marginTop: "-.6rem" }}>
+              pls enter a message
+            </p>
+          ) : (
+            ""
+          )}
         </div>
         <div className="terms">
           <input type="checkbox" id="term"></input>
