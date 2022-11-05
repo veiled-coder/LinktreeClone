@@ -8,13 +8,16 @@ function Contact() {
 
   function handleChange(e) {
     setValue(e.target.value);
+    console.log(e)
   }
   function handleSubmit(e) {
     e.preventDefault();
     console.log(value);
     if (value.length == 0) {
       setError(true);
+
     }
+
   }
 
   return (
