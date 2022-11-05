@@ -24,6 +24,7 @@ form {
 .textarea {
   display: flex;
   flex-direction: column;
+  
   flex: 1;
 }
 .input--style {
@@ -31,6 +32,25 @@ form {
   border: 1px solid #d0d5dd;
   border-radius: 8px;
   box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+
+}
+.input--style.border-red{
+border: 1px solid #F89687;
+box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #FFD3CC;
+}
+
+.area:focus{
+  outline: none;
+}
+.area:focus:valid{
+   border: 1px solid #84CAFF
+
+
+}
+
+
+.input--div{
+
   margin-bottom: 1rem;
 }
 label {
@@ -69,6 +89,13 @@ label {
 }
 .btn--submit:focus {
   background: #1570ef;
+}
+.error{
+  font-size: 14px;
+  color: #475467
+}
+.error--textarea{
+  color: red;
 }
 @media (max-width: 900px) {
   .names {

@@ -3,21 +3,22 @@ import "../styles/contact.css";
 import Button from "./Buttons";
 import { useState } from "react";
 function Contact() {
+  const [txtarea, setTxtarea] = useState("");
+  const [mail, setMail] = useState("");
   const [error, setError] = useState(false);
-  const [value, setValue] = useState("");
 
-  function handleChange(e) {
-    setValue(e.target.value);
-    console.log(e)
+  function handletxtChange(e) {
+    setTxtarea(e.target.value);
+  }
+  function handlemailChange(e) {
+    setMail(e.target.value);
   }
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(value);
-    if (value.length == 0) {
+    console.log(txtarea);
+    if (txtarea.length === 0 || mail.length === 0) {
       setError(true);
-
     }
-
   }
 
   return (
@@ -25,8 +26,8 @@ function Contact() {
       <h2>Contact Me</h2>
       <p>Hi there, contact me to ask me about anything you have in mind.</p>
       <form onSubmit={handleSubmit}>
-        <div className="names">
-          <div className="name">
+        <div className="names input--div">
+          <div className="name ">
             <label htmlFor="first_name">First Name</label>
 
             <input
@@ -47,29 +48,32 @@ function Contact() {
             />
           </div>
         </div>
-        <div className="mail">
+        <div className="mail input--div">
           <label htmlFor="email">Email</label>
           <input
             id="email"
             type="email"
-            className="input--style"
+            className="input--style mail--input"
             placeholder="yourname@email.com"
+            onChange={handlemailChange}
           ></input>
+          {error && mail.length <= 0 ? (
+            <p className="error">This is a hint text to help user</p>
+          ) : (
+            ""
+          )}
         </div>
-        <div className="textarea">
+        <div className="textarea input--div border--red">
           <label htmlFor="message">Message</label>
           <textarea
             id="message"
             name="message"
-            className="input--style"
+            className={`input--style area ${error &&txtarea.length<=0? 'border-red':''}`}
             placeholder="Send me a message and I'll reply you as soon as possible..."
-            onChange={handleChange}
-            
+            onChange={handletxtChange}
           ></textarea>
-          {error && value.length <= 0 ? (
-            <p style={{ color: "red", marginTop: "-.6rem" }}>
-              pls enter a message
-            </p>
+          {error && txtarea.length <= 0 ? (
+            <p className="error error--textarea">pls enter a message</p>
           ) : (
             ""
           )}
