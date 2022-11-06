@@ -88,7 +88,7 @@ function Contact() {
           type="submit"
           name="Send message"
           Class="input--style btn--submit"
-          id="btn_submit"
+          id="btn__submit"
         />
       </form>
     </div>
