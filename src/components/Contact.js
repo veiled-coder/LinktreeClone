@@ -73,7 +73,7 @@ function Contact() {
             onChange={handletxtChange}
           ></textarea>
           {error && txtarea.length <= 0 ? (
-            <p className="error error--textarea">pls enter a message</p>
+            <p className="error error--textarea">Please enter a message</p>
           ) : (
             ""
           )}
